@@ -1,0 +1,20 @@
+<view class="page">
+
+  <!--顶部导航栏-->
+  <view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">新闻</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">视频</view>
+  </view>
+
+  <!--内容主体-->
+
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item>
+      <view>这里有新闻</view>
+    </swiper-item>
+    <swiper-item>
+      <view>这里有视频</view>
+    </swiper-item>
+  </swiper>
+
+</view>
